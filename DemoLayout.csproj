@@ -60,16 +60,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Presentation\Pages\AbsolutePage.xaml">
+	  <MauiXaml Update="Presentation\Pages\Collections\CollectionViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Presentation\Pages\FlexPage.xaml">
+	  <MauiXaml Update="Presentation\Pages\Layouts\AbsolutePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Presentation\Pages\GridPage.xaml">
+	  <MauiXaml Update="Presentation\Pages\Layouts\FlexPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Presentation\Pages\StackLayoutPage.xaml">
+	  <MauiXaml Update="Presentation\Pages\Layouts\GridPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Presentation\Pages\Layouts\StackLayoutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Presentation\Pages\Collections\ListViewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

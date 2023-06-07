@@ -4,18 +4,42 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DemoLayout"
-    xmlns:views="clr-namespace:DemoLayout.Presentation.Pages"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:DemoLayout.Presentation.Pages">
 
-    <TabBar>
-        <ShellContent
-            Title="Stack"
-            ContentTemplate="{DataTemplate views:StackLayoutPage}"
-            Icon="menu.png" />
-        <ShellContent
-            Title="Absolute"
-            ContentTemplate="{DataTemplate views:AbsolutePage}"
-            Icon="menu.png" />
-    </TabBar>
+    <FlyoutItem Title="Stack" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:StackLayoutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Absolute" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:AbsolutePage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Grid" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:GridPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Flex" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:FlexPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="List" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:ListViewPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Collection" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:CollectionViewPage}" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
