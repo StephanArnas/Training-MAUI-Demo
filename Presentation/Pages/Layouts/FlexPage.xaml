@@ -3,11 +3,40 @@
     x:Class="DemoLayout.Presentation.Pages.FlexPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="FlexPage">
-    <FlexLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to FlexLayout!"
-            VerticalOptions="Center" />
+    Title="Flex">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="OverrideBaseRectangle"
+                BasedOn="{StaticResource BaseRectangle}"
+                TargetType="Rectangle">
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+            <Style
+                x:Key="Override2BaseRectangle"
+                BasedOn="{StaticResource BaseRectangle}"
+                TargetType="Rectangle">
+                <Setter Property="WidthRequest" Value="150" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <FlexLayout
+        AlignContent="Stretch"
+        AlignItems="Center"
+        JustifyContent="SpaceEvenly"
+        Wrap="Wrap">
+
+        <Rectangle BackgroundColor="Red" Style="{StaticResource OverrideBaseRectangle}" />
+        <Rectangle BackgroundColor="Blue" Style="{StaticResource OverrideBaseRectangle}" />
+        <Rectangle BackgroundColor="Green" Style="{StaticResource OverrideBaseRectangle}" />
+
+        <Rectangle BackgroundColor="Cyan" Style="{StaticResource Override2BaseRectangle}" />
+        <Rectangle BackgroundColor="Coral" Style="{StaticResource Override2BaseRectangle}" />
+
+        <Rectangle BackgroundColor="Crimson" Style="{StaticResource BaseRectangle}" />
+        <Rectangle BackgroundColor="Chocolate" Style="{StaticResource BaseRectangle}" />
+
     </FlexLayout>
 </ContentPage>

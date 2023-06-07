@@ -3,11 +3,44 @@
     x:Class="DemoLayout.Presentation.Pages.StackLayoutPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="StackLayoutPage">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to StackLayout!"
-            VerticalOptions="Center" />
+    Title="StackLayout">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="OverrideBaseRectangle"
+                BasedOn="{StaticResource BaseRectangle}"
+                TargetType="Rectangle">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Spacing="10">
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Rectangle BackgroundColor="Red" Style="{StaticResource OverrideBaseRectangle}" />
+            <Rectangle BackgroundColor="Blue" Style="{StaticResource OverrideBaseRectangle}" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Rectangle BackgroundColor="Green" Style="{StaticResource OverrideBaseRectangle}" />
+            <Rectangle BackgroundColor="Yellow" Style="{StaticResource OverrideBaseRectangle}" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Rectangle
+                BackgroundColor="Cyan"
+                HeightRequest="100"
+                Style="{StaticResource OverrideBaseRectangle}" />
+            <Rectangle
+                BackgroundColor="Coral"
+                HeightRequest="100"
+                Style="{StaticResource OverrideBaseRectangle}" />
+        </StackLayout>
+
+        <Rectangle BackgroundColor="Crimson" Style="{StaticResource OverrideBaseRectangle}" />
+        <Rectangle BackgroundColor="Chocolate" Style="{StaticResource OverrideBaseRectangle}" />
+
     </VerticalStackLayout>
 </ContentPage>
