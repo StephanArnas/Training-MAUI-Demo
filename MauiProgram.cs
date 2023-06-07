@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Sharpnado.CollectionView;
 
 namespace DemoLayout;
 
@@ -9,6 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+            .UseSharpnadoCollectionView(loggerEnable: false)
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

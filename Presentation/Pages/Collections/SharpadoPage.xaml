@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DemoLayout.Presentation.Pages.SharpadoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:page="clr-namespace:DemoLayout.Presentation.Pages"
+    xmlns:sho="http://sharpnado.com"
+    Title="Sharpado"
+    x:DataType="page:SharpadoPage">
+    <VerticalStackLayout>
+        <Label HorizontalOptions="Center" Text="Welcome to .NET MAUI!" />
+
+        <sho:CollectionView
+            x:Name="CollectionView"
+            ItemsSource="{Binding Items}"
+            TapCommand="{Binding ItemTapped}">
+            <sho:CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Label Text="{Binding}" />
+                    </ContentView>
+                </DataTemplate>
+            </sho:CollectionView.ItemTemplate>
+        </sho:CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

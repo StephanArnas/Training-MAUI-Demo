@@ -42,4 +42,10 @@
         </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Title="Sharpado" Icon="menu.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:SharpadoPage}" />
+        </Tab>
+    </FlyoutItem>
+
 </Shell>

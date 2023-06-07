@@ -57,10 +57,15 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Sharpnado.CollectionView.Maui" Version="3.0.0" />
+		<PackageReference Include="Sharpnado.Maui.TaskLoaderView" Version="2.5.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Presentation\Pages\Collections\CollectionViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Presentation\Pages\Collections\SharpadoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Presentation\Pages\Layouts\AbsolutePage.xaml">

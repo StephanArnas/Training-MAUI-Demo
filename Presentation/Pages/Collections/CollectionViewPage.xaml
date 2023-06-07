@@ -9,5 +9,23 @@
             HorizontalOptions="Center"
             Text="Welcome to CollectionViewPage!"
             VerticalOptions="Center" />
+
+        <CollectionView
+            x:Name="collectionView"
+            ItemsSource="{Binding Items}"
+            SelectionChanged="OnSelectionChanged"
+            SelectionMode="Single">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                        Padding="10"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding .}"
+                        VerticalOptions="CenterAndExpand" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>
